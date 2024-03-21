@@ -7,7 +7,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Table Users</title>
+                <title>Delete Users</title>
                 <!-- Latest compiled and minified CSS -->
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -24,8 +24,7 @@
                 <div class="container mt-5">
                     <div class="row">
                         <div class="d-flex justify-content-between mb-3">
-                            <h3>Table user</h3>
-                            <a href="/admin/user/create" class="btn btn-primary">Create a user</a>
+                            <h3>Delete user</h3>
                         </div>
                         <hr />
                         <table class="table table-hover">
@@ -46,8 +45,8 @@
                                         <td>${user.fullName}</td>
                                         <td>
                                             <a href="/admin/user/${user.id}" class="btn btn-success">View</a>
-                                            <button type="button" class="btn btn-warning">Update</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <a href="/admin/user/update/${user.id}" class="btn btn-warning">Update</a>
+                                            <a href="/admin/user/delete/${user.id}" class="btn btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                 </c:forEach>
