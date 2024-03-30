@@ -19,18 +19,22 @@ public class UserService {
         return this.userRepository.findAll();
     }
 
-    public String handleHello() {
-        return "Hello from Service";
+    public List<User> getAllUsersByEmail(String email) {
+        return this.userRepository.findOneByEmail(email);
     }
 
     public User handleSaveUser(User user) {
-        return this.userRepository.save(user);
+        User eric = this.userRepository.save(user);
+        System.out.println(eric);
+        return eric;
     }
 
     public User getUserById(long id) {
         return this.userRepository.findById(id);
     }
+
     public void deleteAUser(long id) {
         this.userRepository.deleteById(id);
     }
+
 }
